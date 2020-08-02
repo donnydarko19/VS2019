@@ -1,0 +1,30 @@
+{
+    "version": "0.2.0",
+    "configurations": 
+	[
+        
+        {
+            "name": "C++ Launcher",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
+            "args": [],
+            "stopAtEntry": false,
+			"customLaunchSetupCommands": 
+			[
+				{ 
+				"text": "target-run", 
+				"description": "run target", 
+				"ignoreFailures": false 
+				}
+			],
+			"launchCompleteCommand": "exec-run",
+				"Windows": 
+				{
+				"MIMode": "gdb",
+				"miDebuggerPath": "C:\\MinGW\\bin\\gdb.exe"
+				},
+            "preLaunchTask": "build"
+        }
+    ]
+}
